@@ -1,0 +1,79 @@
+/* checkout-page.css */
+
+.checkout-page {
+  padding: 30px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  animation: fadeInUp 1s ease-in-out;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Fade-in + float animation for overall container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Simple fade-in for list */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: itemFadeIn 0.8s ease forwards;
+}
+
+/* Staggered animation for multiple items */
+.checkout-item:nth-child(1) { animation-delay: 0.2s; }
+.checkout-item:nth-child(2) { animation-delay: 0.4s; }
+.checkout-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes itemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.place-order-btn {
+  background-color: #B00087;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.place-order-btn:hover {
+  background-color: #8a006b;
+  transform: scale(1.05);
+}

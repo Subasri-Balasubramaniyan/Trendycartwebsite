@@ -1,0 +1,135 @@
+.add-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #ffe0f0, #fce4ec); /* soft pink */
+  min-height: 100vh;
+  animation: fadeInPage 1s ease-in-out;
+}
+
+/* Page fade-in */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-product-box {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.25);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: floatUp 1s ease forwards;
+}
+
+/* Floating fade-up glass panel */
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.add-product-box h2 {
+  color: #B00087;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInSlide 0.8s ease;
+}
+
+/* Slide in for title */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.add-product-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-box input,
+.add-product-box textarea {
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(200, 200, 200, 0.6);
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.4s, box-shadow 0.4s, transform 0.3s;
+  animation: fadeInput 0.6s ease both;
+  outline: none;
+}
+
+/* Fade-in for fields */
+@keyframes fadeInput {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-product-box input:focus,
+.add-product-box textarea:focus {
+  border-color: #B00087;
+  box-shadow: 0 0 8px rgba(176, 0, 135, 0.35);
+  transform: scale(1.02);
+}
+
+/* Submit button with hover & glow */
+.submit-btn {
+  background: linear-gradient(to right, #B00087, #ff5eaa);
+  color: white;
+  font-size: 16px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: fadeInButton 1s ease forwards;
+  font-weight: bold;
+}
+
+/* Fade-in for button */
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submit-btn:hover {
+  background-color: #8b006c;
+  transform: scale(1.04);
+  box-shadow: 0 0 12px rgba(176, 0, 135, 0.4);
+}
